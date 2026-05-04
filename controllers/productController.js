@@ -2,7 +2,6 @@ const db = require('../models/db');
 const fs = require('fs');
 const path = require('path');
 
-
 exports.getDashboard = async (req, res) => {
     try {
         let query = 'SELECT * FROM products ORDER BY id DESC';
@@ -14,7 +13,6 @@ exports.getDashboard = async (req, res) => {
         }
 
         const [products] = await db.query(query, queryParams);
-        
         res.render('index', { products, success: req.query.success, search: req.query.search });
     } catch (err) {
         console.log(err);
@@ -47,6 +45,7 @@ exports.addProduct = async (req, res) => {
 exports.updateProduct = async (req, res) => {
     const { id, name, category, price, stock } = req.body;
     let newImage = req.file ? req.file.filename : null;
+
     const [oldProduct] = await db.query('SELECT image FROM products WHERE id = ?', [id]);
     
     if (newImage) {
@@ -71,7 +70,6 @@ exports.deleteProduct = async (req, res) => {
     const [product] = await db.query('SELECT image FROM products WHERE id = ?', [id]);
     
     if (product[0] && product[0].image) {
-        
         fs.unlink(path.join(__dirname, '../uploads', product[0].image), err => {
             if (err) console.log("Error deleting image:", err);
         });
