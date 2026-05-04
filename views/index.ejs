@@ -6,7 +6,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/">Supermarket Admin</a>
@@ -19,7 +18,6 @@
     </nav>
 
     <div class="container">
-        <!-- แจ้งเตือน Success Alerts[cite: 1] -->
         <% if (success === 'added') { %> <div class="alert alert-success">Product added successfully!</div> <% } %>
         <% if (success === 'updated') { %> <div class="alert alert-success">Product updated successfully!</div> <% } %>
         <% if (success === 'deleted') { %> <div class="alert alert-warning">Product deleted successfully!</div> <% } %>
@@ -38,7 +36,6 @@
                     <td><%= product.category %></td>
                     <td><%= product.price %> ฿</td>
                     <td>
-                        <!-- เช็ค Stock 0[cite: 1] -->
                         <% if(product.stock === 0) { %>
                             <span class="badge bg-danger">Out of Stock</span>
                         <% } else { %>
@@ -51,7 +48,7 @@
                     </td>
                 </tr>
 
-                <!-- Modal ยืนยันการลบ[cite: 1] -->
+                
                 <div class="modal fade" id="delModal<%= product.id %>" tabindex="-1">
                   <div class="modal-dialog">
                     <div class="modal-content">
