@@ -34,7 +34,7 @@
                     <div class="mb-4">
                         <label class="form-label">Product Image</label>
                         <input type="file" name="image" class="form-control" accept="image/*" onchange="previewImg(event)" <%= product ? '' : 'required' %>>
-                        <!-- โบนัส Image Preview[cite: 1] -->
+                        
                         <div class="mt-3 text-center">
                             <img id="preview" src="<%= product && product.image ? '/uploads/' + product.image : '' %>" 
                                  style="max-width: 150px; <%= product && product.image ? 'display:block; margin:auto;' : 'display:none;' %>" class="rounded border">
