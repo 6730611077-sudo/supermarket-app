@@ -69,7 +69,7 @@ UI Framework: Bootstrap 5
     (หมายเหตุ: แต่ถ้าหากในโฟลเดอร์โปรเจกต์มีไฟล์ package.json อยู่แล้ว สามารถใช้คำสั่ง npm install คำสั่งเดียวได้เลย)
     
 
-  3.ตั้งค่าการเชื่อมต่อฐานข้อมูล (Database Connection)
+3.ตั้งค่าการเชื่อมต่อฐานข้อมูล (Database Connection)
   เปิดไฟล์ที่ใช้ตั้งค่าฐานข้อมูล (เช่น app.js หรือ db.js) ตรวจสอบให้แน่ใจว่าการตั้งค่า Host, User, Password และ Database Name ตรงกับเครื่องของคุณ ตัวอย่างเช่น:
 
       const connection = mysql.createConnection({
@@ -79,7 +79,7 @@ UI Framework: Bootstrap 5
       database: 'supermarket_db'
       });
 
-  4. วิธีรันโปรเจกต์ (Running the Project)
+4. วิธีรันโปรเจกต์ (Running the Project)
   รันคำสั่งด้านล่างใน Terminal เพื่อเริ่มต้นเซิร์ฟเวอร์:
 
   npm run start
