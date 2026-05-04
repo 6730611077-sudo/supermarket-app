@@ -32,15 +32,15 @@ Middleware: Multer, Body-parser
 UI Framework: Bootstrap 5
 
 ขั้นตอนการติดตั้งและเตรียมพร้อม (Installation & Setup)
-1. เตรียมฐานข้อมูล (Database Setup)
+1.เตรียมฐานข้อมูล (Database Setup)
    
-  1.เปิดโปรแกรมจำลองเซิร์ฟเวอร์ (เช่น XAMPP) และเปิดการทำงานของ Apache และ MySQL
+  1.1 เปิดโปรแกรมจำลองเซิร์ฟเวอร์ (เช่น XAMPP) และเปิดการทำงานของ Apache และ MySQL
 
-  2.เข้าไปที่ระบบจัดการฐานข้อมูล (เช่น http://localhost/phpmyadmin)
+  1.2 เข้าไปที่ระบบจัดการฐานข้อมูล (เช่น http://localhost/phpmyadmin)
 
-  3.สร้าง Database ใหม่ชื่อ supermarket_db
+  1.3 สร้าง Database ใหม่ชื่อ supermarket_db
 
-  4.นำเข้า (Import) ไฟล์ db.sql ที่แนบมากับโปรเจกต์ หรือนำคำสั่ง SQL ด้านล่างนี้ไปรันเพื่อสร้างตาราง:
+  1.4 นำเข้า (Import) ไฟล์ db.sql ที่แนบมากับโปรเจกต์ หรือนำคำสั่ง SQL ด้านล่างนี้ไปรันเพื่อสร้างตาราง:
 
     CREATE TABLE products (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -52,15 +52,16 @@ UI Framework: Bootstrap 5
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
+
 2. ติดตั้งโปรเจกต์ (Project Setup)
    
-  1.นำทางไปยังโฟลเดอร์โปรเจกต์ของคุณผ่าน Terminal หรือ Command Prompt
+  2.1 นำทางไปยังโฟลเดอร์โปรเจกต์ของคุณผ่าน Terminal หรือ Command Prompt
 
-  2.หากเป็นการเริ่มตั้งค่าโปรเจกต์ใหม่ ให้รันคำสั่งนี้เพื่อสร้างไฟล์ package.json (เผื่อไว้ในกรณีที่ยังไม่มีไฟล์นี้):
+  2.2 หากเป็นการเริ่มตั้งค่าโปรเจกต์ใหม่ ให้รันคำสั่งนี้เพื่อสร้างไฟล์ package.json (เผื่อไว้ในกรณีที่ยังไม่มีไฟล์นี้):
 
     npm init -y
 
-  3.รันคำสั่งต่อไปนี้เพื่อติดตั้งแพ็กเกจ (Dependencies) ทั้งหมดที่จำเป็นในการรันโปรเจกต์:
+  2.3 รันคำสั่งต่อไปนี้เพื่อติดตั้งแพ็กเกจ (Dependencies) ทั้งหมดที่จำเป็นในการรันโปรเจกต์:
 
     npm i express ejs mysql2 body-parser multer nodemon
 
